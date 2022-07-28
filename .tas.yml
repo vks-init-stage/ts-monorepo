@@ -1,29 +1,24 @@
 postMerge :
   preRun: 
     command:
-      - pnpm install
+      - pnpm install --shamefully-hoist=true 
       - pnpm run -r clean
       - pnpm run -r build
       - ls
   subModules:    
-#       - name: apps-jest-babel
-#         path : "./apps/jest-babel/"
-#         pattern: 
-#           - "./test/index.spec.ts"
-#         framework : jest
-        
-#       - name: apps-jest-tsjest
-#         path : "./apps/jest-tsjest/"
-#         pattern: 
-#           - "./test/index.spec.ts"
-#         framework : jest
-
-      - name: apps
-        path : "./"
+      - name: apps-jest-babel
+        path : "./apps/jest-babel/"
         pattern: 
-          - "./apps/jest-babel/test/index.spec.ts"
-          - "./apps/jest-tsjest/test/index.spec.ts"
+          - "./test/index.spec.ts"
         framework : jest
+        
+      - name: apps-jest-tsjest
+        path : "./apps/jest-tsjest/"
+        pattern: 
+          - "./test/index.spec.ts"
+        framework : jest
+
+
 
 version : 2.0.0
 nodeVersion: 16.15.0
