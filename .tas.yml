@@ -19,10 +19,10 @@ postMerge :
 #         framework : jest
 
       - name: apps
-        path : "./apps/"
+        path : "./"
         pattern: 
-          - "./jest-babel/test/index.spec.ts"
-          - "./jest-tsjest/test/index.spec.ts"
+          - "./apps/jest-babel/test/index.spec.ts"
+          - "./apps/jest-tsjest/test/index.spec.ts"
         framework : jest
 
 version : 2.0.0
