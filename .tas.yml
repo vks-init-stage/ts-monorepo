@@ -6,16 +6,23 @@ postMerge :
       - pnpm run -r build
       - ls
   subModules:    
-      - name: apps-jest-babel
-        path : "./apps/jest-babel/"
-        pattern: 
-          - "./test/index.spec.ts"
-        framework : jest
+#       - name: apps-jest-babel
+#         path : "./apps/jest-babel/"
+#         pattern: 
+#           - "./test/index.spec.ts"
+#         framework : jest
         
-      - name: apps-jest-tsjest
-        path : "./apps/jest-tsjest/"
+#       - name: apps-jest-tsjest
+#         path : "./apps/jest-tsjest/"
+#         pattern: 
+#           - "./test/index.spec.ts"
+#         framework : jest
+
+      - name: apps
+        path : "./apps/"
         pattern: 
-          - "./test/index.spec.ts"
+          - "./jest-babel/test/index.spec.ts"
+          - "./jest-tsjest/test/index.spec.ts"
         framework : jest
 
 version : 2.0.0
