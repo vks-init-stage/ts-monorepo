@@ -6,9 +6,9 @@ postMerge :
       - pnpm run -r build
       - ls
   subModules:    
-      - name: jest-babel
+      - name: app
         runPreRunEveryTime: true
-        path : "./examples/jest-babel/"
+        path : "./app/jest-babel/"
         pattern: 
           - "./test/index.spec.ts"
         framework : jest
