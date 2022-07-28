@@ -1,0 +1,16 @@
+postMerge :
+  preRun: 
+    command:
+      - pnpm install
+      - pnpm run -r clean
+      - pnpm run -r build
+  subModules:    
+      - name: jest-babel
+        runPreRunEveryTime: true
+        path : "./examples/jest-babel/"
+        pattern: 
+          - "./test/index.spec.ts"
+        framework : jest
+
+version : 2.0.0
+nodeVersion: 16.15.0
